@@ -7,6 +7,8 @@ import (
 )
 
 func service() string {
+	//time.Sleep(time.Millisecond * 50)
+	// 超时测试
 	time.Sleep(time.Millisecond * 500)
 	return "Done"
 }
@@ -23,10 +25,12 @@ func AsyncService() chan string {
 	return retCh
 }
 
+// select 做超时机制
 func TestSelect(t *testing.T) {
 	select {
 	case ret := <-AsyncService():
 		t.Log(ret)
+	//	超时设置
 	case <-time.After(time.Millisecond * 100):
 		t.Error("time out")
 	}

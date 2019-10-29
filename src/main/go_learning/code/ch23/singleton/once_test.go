@@ -7,6 +7,8 @@ import (
 	"unsafe"
 )
 
+// 单例模式（还可以使用init()方法）
+
 type Singleton struct {
 	data string
 }
@@ -14,6 +16,7 @@ type Singleton struct {
 var singleInstance *Singleton
 var once sync.Once
 
+// sync.Once 的 do 方法只执行一次
 func GetSingletonObj() *Singleton {
 	once.Do(func() {
 		fmt.Println("Create Obj")

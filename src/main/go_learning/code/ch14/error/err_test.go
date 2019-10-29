@@ -7,10 +7,12 @@ import (
 	"testing"
 )
 
+// 需要区分错误类型时，定义预制的错误
 var LessThanTwoError = errors.New("n should be not less than 2")
 var LargerThenHundredError = errors.New("n should be not larger than 100")
 
 func GetFibonacci(n int) ([]int, error) {
+	// 入参校验：区分错误类型
 	if n < 2 {
 		return nil, LessThanTwoError
 	}
@@ -26,6 +28,7 @@ func GetFibonacci(n int) ([]int, error) {
 }
 
 func TestGetFibonacci(t *testing.T) {
+	// 错误检查机制
 	if v, err := GetFibonacci(1); err != nil {
 		if err == LessThanTwoError {
 			fmt.Println("It is less.")
@@ -37,6 +40,7 @@ func TestGetFibonacci(t *testing.T) {
 
 }
 
+// 反面例子：error 嵌套
 func GetFibonacci1(str string) {
 	var (
 		i    int
@@ -54,6 +58,7 @@ func GetFibonacci1(str string) {
 	}
 }
 
+// 先处理错误，没有错误菜返回，要避免嵌套
 func GetFibonacci2(str string) {
 	var (
 		i    int
@@ -65,7 +70,6 @@ func GetFibonacci2(str string) {
 		return
 	}
 	if list, err = GetFibonacci(i); err != nil {
-
 		fmt.Println("Error", err)
 		return
 	}
