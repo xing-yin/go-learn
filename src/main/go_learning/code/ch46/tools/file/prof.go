@@ -24,6 +24,7 @@ func fillMatrix(m *[row][col]int) {
 	}
 }
 
+// 加和操作
 func calculate(m *[row][col]int) {
 	for i := 0; i < row; i++ {
 		tmp := 0
