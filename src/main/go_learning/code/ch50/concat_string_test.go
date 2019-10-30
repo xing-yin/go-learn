@@ -8,8 +8,13 @@ import (
 	"testing"
 )
 
+/**
+高效的字符串串连接
+*/
+
 const numbers = 100
 
+// 性能不好
 func BenchmarkSprintf(b *testing.B) {
 	b.ResetTimer()
 	for idx := 0; idx < b.N; idx++ {
@@ -21,6 +26,7 @@ func BenchmarkSprintf(b *testing.B) {
 	b.StopTimer()
 }
 
+// 字符串连接【最推荐】
 func BenchmarkStringBuilder(b *testing.B) {
 	b.ResetTimer()
 	for idx := 0; idx < b.N; idx++ {
@@ -34,6 +40,7 @@ func BenchmarkStringBuilder(b *testing.B) {
 	b.StopTimer()
 }
 
+// 字符串连接推荐
 func BenchmarkBytesBuf(b *testing.B) {
 	b.ResetTimer()
 	for idx := 0; idx < b.N; idx++ {
@@ -46,6 +53,7 @@ func BenchmarkBytesBuf(b *testing.B) {
 	b.StopTimer()
 }
 
+// 性能不好
 func BenchmarkStringAdd(b *testing.B) {
 	b.ResetTimer()
 	for idx := 0; idx < b.N; idx++ {

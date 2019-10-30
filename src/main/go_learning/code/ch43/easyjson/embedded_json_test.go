@@ -16,6 +16,7 @@ var jsonStr = `{
 	}
 }	`
 
+// 利用反射
 func TestEmbeddedJson(t *testing.T) {
 	e := new(Employee)
 	err := json.Unmarshal([]byte(jsonStr), e)
@@ -31,6 +32,7 @@ func TestEmbeddedJson(t *testing.T) {
 
 }
 
+// 利用 easyJson
 func TestEasyJson(t *testing.T) {
 	e := Employee{}
 	e.UnmarshalJSON([]byte(jsonStr))

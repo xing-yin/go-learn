@@ -8,6 +8,10 @@ import (
 	"sync"
 )
 
+/**
+启动的代码演示（非生产级）
+*/
+
 const (
 	Waiting = iota
 	Running
@@ -43,6 +47,7 @@ type Collector interface {
 	Destory() error
 }
 
+// 为 agent 提供扩展点
 type Agent struct {
 	collectors map[string]Collector
 	evtBuf     chan Event

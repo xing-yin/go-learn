@@ -32,6 +32,7 @@ func TestOverSizeInit(t *testing.T) {
 	}
 }
 
+// 自动增长
 func BenchmarkAutoGrow(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		s := []int{}
@@ -41,6 +42,7 @@ func BenchmarkAutoGrow(b *testing.B) {
 	}
 }
 
+// 初始化合适大小
 func BenchmarkProperInit(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		s := make([]int, 0, numOfElems)
@@ -50,6 +52,7 @@ func BenchmarkProperInit(b *testing.B) {
 	}
 }
 
+// 初始化远大于需要的内存
 func BenchmarkOverSizeInit(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		s := make([]int, 0, numOfElems*8)

@@ -9,6 +9,7 @@ import (
 func TestSpec(t *testing.T) {
 
 	// Only pass t into top-level Convey calls
+	// 给定 2个偶数，还是一个偶数
 	Convey("Given 2 even numbers", t, func() {
 		a := 3
 		b := 4

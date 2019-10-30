@@ -6,12 +6,14 @@ import (
 	"testing"
 )
 
+// 利用反射获取类型和值
 func TestTypeAndValue(t *testing.T) {
 	var f int64 = 10
 	t.Log(reflect.TypeOf(f), reflect.ValueOf(f))
 	t.Log(reflect.ValueOf(f).Type())
 }
 
+// 反射获取类型
 func CheckType(v interface{}) {
 	t := reflect.TypeOf(v)
 	switch t.Kind() {
@@ -49,6 +51,7 @@ func TestDeepEqual(t *testing.T) {
 	fmt.Println(reflect.DeepEqual(c1, c2))
 }
 
+// 利利⽤反射编写灵活的代码
 type Employee struct {
 	EmployeeID string
 	Name       string `format:"normal"`
@@ -67,6 +70,7 @@ type Customer struct {
 
 func TestInvokeByName(t *testing.T) {
 	e := &Employee{"1", "Mike", 30}
+	// 按名字访问结构的成员
 	//按名字获取成员
 	t.Logf("Name: value(%[1]v), Type(%[1]T) ", reflect.ValueOf(*e).FieldByName("Name"))
 	if nameField, ok := reflect.TypeOf(*e).FieldByName("Name"); !ok {
@@ -74,6 +78,7 @@ func TestInvokeByName(t *testing.T) {
 	} else {
 		t.Log("Tag:format", nameField.Tag.Get("format"))
 	}
+	// 按名字访问结构的⽅方法
 	reflect.ValueOf(e).MethodByName("UpdateAge").
 		Call([]reflect.Value{reflect.ValueOf(1)})
 	t.Log("Updated Age:", e)

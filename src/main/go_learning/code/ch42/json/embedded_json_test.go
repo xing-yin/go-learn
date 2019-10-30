@@ -18,6 +18,7 @@ var jsonStr = `{
 
 func TestEmbeddedJson(t *testing.T) {
 	e := new(Employee)
+	// 填充
 	err := json.Unmarshal([]byte(jsonStr), e)
 	if err != nil {
 		t.Error(err)

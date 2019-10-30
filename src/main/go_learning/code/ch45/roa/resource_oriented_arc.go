@@ -3,10 +3,9 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/julienschmidt/httprouter"
 	"log"
 	"net/http"
-
-	"github.com/julienschmidt/httprouter"
 )
 
 type Employee struct {
@@ -43,7 +42,6 @@ func GetEmployeeByName(w http.ResponseWriter, r *http.Request, ps httprouter.Par
 		w.Write([]byte(fmt.Sprintf("{\"error\":,\"%s\"}", err)))
 		return
 	}
-
 	w.Write(infoJson)
 }
 

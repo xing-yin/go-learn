@@ -2,6 +2,7 @@ package pipefilter
 
 import "testing"
 
+// 测试
 func TestStraightPipeline(t *testing.T) {
 	spliter := NewSplitFilter(",")
 	converter := NewToIntFilter()

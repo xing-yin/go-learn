@@ -10,11 +10,13 @@ type Content struct {
 	Detail [10000]int
 }
 
+// 传值的gc
 func withValue(arr [NumOfElems]Content) int {
 	//	fmt.Println(&arr[2])
 	return 0
 }
 
+// 传引用的gc
 func withReference(arr *[NumOfElems]Content) int {
 	//b := *arr
 	//	fmt.Println(&arr[2])

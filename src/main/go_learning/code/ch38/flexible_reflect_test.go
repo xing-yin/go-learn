@@ -6,6 +6,7 @@ import (
 	"testing"
 )
 
+// 不能直接比较 map/slice,可以利用 reflect.DeepEqual(a, b)
 func TestDeepEqual(t *testing.T) {
 	a := map[int]string{1: "one", 2: "two", 3: "three"}
 	b := map[int]string{1: "one", 2: "two", 3: "three"}
@@ -36,6 +37,8 @@ type Customer struct {
 	Age      int
 }
 
+// interface{} 表示可以传入任何参数
+// 填充 Employee 和 Customer 公共字段
 func fillBySettings(st interface{}, settings map[string]interface{}) error {
 
 	// func (v Value) Elem() Value
@@ -76,7 +79,8 @@ func fillBySettings(st interface{}, settings map[string]interface{}) error {
 
 func TestFillNameAndAge(t *testing.T) {
 	settings := map[string]interface{}{"Name": "Mike", "Age": 30}
-	e := Employee{}
+	e := new(Employee)
+	//e := Employee{}
 	if err := fillBySettings(&e, settings); err != nil {
 		t.Fatal(err)
 	}
