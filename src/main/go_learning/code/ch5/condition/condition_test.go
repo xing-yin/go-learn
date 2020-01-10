@@ -2,7 +2,7 @@ package condition_test
 
 import "testing"
 
-func TestIfNultiSec(t *testing.T) {
+func TestIfMultiSec(t *testing.T) {
 	// if 支持变量量赋值
 	if a := 1 == 1; a {
 		// 主要是为了支持多返回值赋值
@@ -12,10 +12,10 @@ func TestIfNultiSec(t *testing.T) {
 }
 
 // switch条件：
-// a.条件表达式不不限制为常量量或者整数;
+// a.条件表达式不限制为常量或者整数;
 // b.单个 case 中，可以出现多个结果选项, 使⽤用逗号分隔;
-// c.与 C 语⾔言等规则相反，Go 语⾔言不不需要⽤用break来明确退出⼀一个 case;
-// d.可以不不设定 switch 之后的条件表达式，在此种情况下，整个 switch 结
+// c.与 C 语⾔等规则相反，Go 语⾔不需要用break来明确退出⼀一个 case;
+// d.可以不设定 switch 之后的条件表达式，在此种情况下，整个 switch 结
 // e.构与多个 if...else... 的逻辑作⽤用等同
 func TestSwitchMultiCase(t *testing.T) {
 	for i := 0; i < 5; i++ {
@@ -35,6 +35,7 @@ func TestSwitchMultiCase(t *testing.T) {
 // 简化 if else
 func TestSwitchCaseCondition(t *testing.T) {
 	for i := 0; i < 5; i++ {
+		// 没有条件的switch,相当于简化的 if else
 		switch {
 		// case 后面直接跟条件
 		case i%2 == 0:
@@ -42,7 +43,7 @@ func TestSwitchCaseCondition(t *testing.T) {
 		case i%2 == 1:
 			t.Log("Odd")
 		default:
-			t.Log("unknow")
+			t.Log("unKnow")
 		}
 	}
 }

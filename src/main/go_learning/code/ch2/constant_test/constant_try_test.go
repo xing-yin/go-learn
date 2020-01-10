@@ -2,7 +2,7 @@ package constant_test
 
 import "testing"
 
-// 常量量定义
+// 常量定义
 // 快速设置连续值:会自动递增加1（简洁写法）
 const (
 	Monday = 1 + iota

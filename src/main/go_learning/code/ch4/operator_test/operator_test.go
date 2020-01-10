@@ -8,7 +8,7 @@ const (
 	Executable
 )
 
-// 用 == ⽐比较数组
+// 用 == ⽐较数组
 func TestCompareArray(t *testing.T) {
 	a := [...]int{1, 2, 3, 4}
 	b := [...]int{1, 3, 2, 4}

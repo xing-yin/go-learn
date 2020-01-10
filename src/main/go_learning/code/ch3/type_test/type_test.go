@@ -16,7 +16,7 @@ func TestImplicit(t *testing.T) {
 	b = int64(a)
 
 	var c MyInt
-	// 2.别名和原有类型也不不能进⾏行行隐式类型转换
+	// 2.别名和原有类型也不能进行隐式类型转换
 	//c = b
 	c = MyInt(b)
 	t.Log(a, b, c)
@@ -26,7 +26,7 @@ func TestImplicit(t *testing.T) {
 func TestPoint(t *testing.T) {
 	a := 1
 	aPtr := &a
-	// 1. 不不⽀支持指针运算
+	// 1. 不支持指针运算
 	//aPtr = aPtr + 1
 	t.Log(a, aPtr)
 	// %T 获得类型

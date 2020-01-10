@@ -20,7 +20,7 @@ func TestArrayTravel(t *testing.T) {
 	for i := 0; i < len(arr3); i++ {
 		t.Log(arr3[i])
 	}
-	// 方式2:下划线 _ 可以忽略它
+	// 方式2:下划线 _ 表示可以忽略它
 	for _, elem := range arr3 {
 		t.Log(elem)
 	}
@@ -30,7 +30,7 @@ func TestArrayTravel(t *testing.T) {
 	}
 }
 
-// 数组截取
+// 数组截取(左闭右开区间)
 func TestArraySection(t *testing.T) {
 	arr3 := [...]int{1, 2, 3, 4, 5}
 	arr3Section := arr3[2:len(arr3)]
