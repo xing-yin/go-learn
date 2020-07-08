@@ -13,12 +13,14 @@ func TestSliceInit(t *testing.T) {
 	s1 := []int{1, 2, 3, 4}
 	t.Log(len(s1), cap(s1))
 
+	// 第一个参数是切片元素类型，第二个参数是长度，第三个参数是容量
 	s2 := make([]int, 3, 5)
 	t.Log(len(s2), cap(s2))
 	// 其中len个元素会被初始化为默认零值，未初始化元素不不可以访问
 	// 比如下面的 s2[3]
 	//t.Log(s2[0], s2[1], s2[2], s2[3])
 	t.Log(s2[0], s2[1], s2[2])
+	// append 是往切片的最后面追加元素
 	s2 = append(s2, 1)
 	t.Log(s2[0], s2[1], s2[2], s2[3])
 	t.Log(len(s2), cap(s2))
@@ -38,7 +40,7 @@ func TestSliceShareMemory(t *testing.T) {
 	year := []string{"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep",
 		"Oct", "Nov", "Dec"}
 	Q2 := year[3:6]
-	// 长度为3，容量为9(从year 的第3个到最后一个元素)
+	// 长度为3，容量为9(从 year 的第3个到最后一个元素)
 	t.Log(Q2, len(Q2), cap(Q2))
 	summer := year[5:8]
 	t.Log(summer, len(summer), cap(summer))
