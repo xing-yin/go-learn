@@ -8,7 +8,7 @@ import (
 /**
 接口
 接口 是方法特征的命名集合
-习更多关于 Go 的接口的知识: http://jordanorelli.tumblr.com/post/32665860244/how-to-use-interfaces-in-go
+更多关于 Go 的接口的知识: http://jordanorelli.tumblr.com/post/32665860244/how-to-use-interfaces-in-go
 */
 
 // 这里是一个几何体的基本接口
