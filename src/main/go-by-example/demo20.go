@@ -7,8 +7,8 @@ import (
 
 /**
 接口
-接口 是方法特征的命名集合
-更多关于 Go 的接口的知识: http://jordanorelli.tumblr.com/post/32665860244/how-to-use-interfaces-in-go
+接口是方法特征的命名集合
+更多关于 Go 的接口的知识自行搜索
 */
 
 // 这里是一个几何体的基本接口
@@ -45,7 +45,7 @@ func (c circle) perim() float64 {
 	return 2 * math.Pi * c.redius
 }
 
-// 如果一个变量的是接口类型，那么我们可以调用这个被命名的接口中的方法。
+// 如果一个变量是接口类型，那么我们可以调用这个被命名的接口中的方法。
 // 这里有一个一通用的 measure 函数，利用这个特性，它可以用在任何 geometry 上。
 func measure(g geometry) {
 	fmt.Println(g)
