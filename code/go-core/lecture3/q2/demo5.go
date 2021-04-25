@@ -2,7 +2,7 @@ package main
 
 import (
 	"flag"
-	"main/go-core/lecture3/q2/lib"
+	//"code/go-core/lecture3/q2/lib"
 )
 
 var name string
