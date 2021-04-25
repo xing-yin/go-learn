@@ -9,7 +9,10 @@ var container = []string{"zero", "one", "two"}
 func main() {
 	container := map[int]string{0: "zero", 1: "one", 2: "two"}
 
+	//value, ok := interface{}(container).([]string)
+
 	// 方式1。
+	_ = interface{}(container).([]string)
 	_, ok1 := interface{}(container).([]string)
 	_, ok2 := interface{}(container).(map[int]string)
 	if !(ok1 || ok2) {

@@ -22,6 +22,7 @@ func main() {
 		fmt.Printf("Type %T is the same as type %T.\n", myStrs, strs)
 		fmt.Println()
 	}
+
 	// 示例2。
 	{
 		type MyString string
