@@ -1,6 +1,7 @@
 package main
 
 import (
+	// 需在此处添加代码。[1]
 	"flag"
 	"fmt"
 )
@@ -12,6 +13,7 @@ func init() {
 }
 
 func main() {
+	// 需在此处添加代码。[3]
 	flag.Parse()
 	fmt.Printf("Hello, %s!\n", name)
 }
