@@ -2,10 +2,10 @@ package main
 
 import (
 	"fmt"
+	"go-learn/code/go-core/puzzlers/article37/common"
+	"go-learn/code/go-core/puzzlers/article37/common/op"
 	"os"
 	"path/filepath"
-	"puzzlers/article37/common"
-	"puzzlers/article37/common/op"
 	"runtime"
 	"runtime/pprof"
 	"time"

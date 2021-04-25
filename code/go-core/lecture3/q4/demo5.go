@@ -2,8 +2,8 @@ package main
 
 import (
 	"flag"
-	"main/go-core/lecture3/q2/lib"
-	"main/go-core/lecture3/q4/internal"
+	"go-learn/code/go-core/lecture3/q2/lib"
+	"go-learn/code/go-core/lecture3/q4/internal"
 	"os"
 )
 

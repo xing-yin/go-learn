@@ -2,8 +2,8 @@ package main
 
 import (
 	"flag"
-	"puzzlers/article3/q4/lib"
-	//in "puzzlers/article3/q4/lib/internal" // 此行无法通过编译。
+	"go-learn/code/go-core/puzzlers/article3/q4/lib"
+	//in "go-learn/code/go-core/puzzlers/article3/q4/lib/internal" // 此行无法通过编译。
 	//"os"
 )
 

@@ -3,9 +3,9 @@ package main
 import (
 	"errors"
 	"fmt"
+	"go-learn/code/go-core/puzzlers/article37/common"
+	"go-learn/code/go-core/puzzlers/article37/common/op"
 	"os"
-	"puzzlers/article37/common"
-	"puzzlers/article37/common/op"
 	"runtime/pprof"
 )
 
