@@ -6,7 +6,7 @@
 
 ### go-by-example
 
-参考 go-by-example 文档的代码练习和笔记
+参考 [go-by-example](https://books.studygolang.com/gobyexample/ 文档的代码练习和笔记
 
 ### go-core
 
