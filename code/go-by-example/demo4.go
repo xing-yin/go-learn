@@ -20,7 +20,7 @@ func main() {
 	// const 语句可以出现在任何 var 语句可以出现的地方
 	const n = 5000000000
 
-	//常数表达式可以执行任意精度的运算
+	// 常数表达式可以执行任意精度的运算
 	const d = 3e20 / n
 	fmt.Println(d)
 
