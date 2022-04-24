@@ -36,6 +36,7 @@ func main() {
 	copy(c, s)
 	fmt.Println("copy", c)
 
+	/// todo 注意 s[2:5] 不包含 s[5];但是 s[:5] 包含 s[5]
 	//Slice 支持通过 slice[low:high] 语法进行“切片”操作。
 	// 例如，这里得到一个包含元素 s[2], s[3],s[4] 的 slice
 	l := s[2:5]
