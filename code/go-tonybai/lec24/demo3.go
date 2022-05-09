@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 /**
  * @Author: Alan Yin
@@ -45,3 +47,12 @@ func main() {
 	f1(&t2, 3)
 	fmt.Println(f2(t2))
 }
+
+//// 不能为原生类型（诸如 int、float64、map 等）添加方法
+//func (i int) Foo() string {
+//	return ""
+//}
+//
+//// 不能跨越 Go 包为其他包的类型声明新方法
+//func (s http.Server) Foo() string {
+//}
