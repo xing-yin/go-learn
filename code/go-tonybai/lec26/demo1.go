@@ -1,52 +1,28 @@
-package main
-
-import (
-	"fmt"
-	"io"
-	"strings"
-)
+package employee
 
 /**
  * @Author: Alan Yin
  * @Date: 2022/5/9
- * @Desc:
+ * @Desc: 演示：接口类型的类型嵌入
  */
 
-type MyInt int
-
-func (n *MyInt) Add(m int) {
-	*n = *n + MyInt(m)
+type E interface {
+	M1()
+	M2()
 }
 
-type t struct {
-	a int
-	b int
-}
+//type I interface {
+//	M1()
+//	M2()
+//	M3()
+//}
 
-type S struct {
-	*MyInt
-	t
-	io.Reader
-	s string
-	n int
+// I 与上面等价
+type I interface {
+	E
+	M3()
 }
 
 func main() {
-	m := MyInt(17)
-	r := strings.NewReader("hello,go")
-	s := S{
-		MyInt: &m,
-		t: t{
-			a: 1,
-			b: 2,
-		},
-		Reader: r,
-		s:      "demo",
-	}
 
-	var sl = make([]byte, len("hello,go"))
-	s.Reader.Read(sl)
-	fmt.Println(string(sl)) // hello,go
-	s.MyInt.Add(5)
-	fmt.Println(*(s.MyInt)) // 22
 }
