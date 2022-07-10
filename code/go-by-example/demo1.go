@@ -6,7 +6,8 @@ import "fmt"
 老牌入门案例: hello world
 */
 func main() {
-	fmt.Println("hello world")
+	//fmt.Println("hello world")
+	fmt.Println(fmt.Sprintf("\"error\":\"server_error\"\n \"message\": %+v", "msg"))
 }
 
 /**
