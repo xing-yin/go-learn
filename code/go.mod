@@ -11,6 +11,7 @@ require (
 	github.com/mailru/easyjson v0.7.7
 	github.com/smartystreets/goconvey v1.7.2
 	github.com/stretchr/testify v1.8.0
+	golang.org/x/net v0.0.0-20190311183353-d8887717615a
 )
 
 require (
