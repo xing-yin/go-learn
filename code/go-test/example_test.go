@@ -13,3 +13,16 @@ func ExampleMax() {
 	// Output:
 	// 2
 }
+
+// ----------几种常见的示例----------
+// 代表了整个包的示例
+func Example() {}
+
+// 函数F的示例
+func ExampleF() {}
+
+// 类型T的示例
+func ExampleT() {}
+
+// 方法T_M的示例a
+func ExampleT_M() {}

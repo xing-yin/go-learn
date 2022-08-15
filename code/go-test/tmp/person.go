@@ -13,7 +13,3 @@ type Person struct {
 func (p *Person) older(other *Person) bool {
 	return p.age > other.age
 }
-
-func main() {
-
-}

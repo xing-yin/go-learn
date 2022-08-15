@@ -1,0 +1,5 @@
+mode: set
+go-test/math.go:15.29,17.2 1 1
+go-test/math.go:19.32,21.2 1 1
+go-test/math.go:23.32,25.2 1 0
+go-test/math.go:27.20,29.2 1 0

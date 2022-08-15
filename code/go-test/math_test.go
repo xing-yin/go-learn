@@ -41,15 +41,23 @@ func TestAbs_3(t *testing.T) {
 		x    float64
 		want float64
 	}{
-		{-0.3, 0.3},
-		{-2, 2},
-		{-3.1, 3.1},
-		{4, 4},
+		{
+			x:    -0.3,
+			want: 0.3,
+		},
+		{
+			x:    -2,
+			want: 2,
+		},
+		{
+			x:    -3.2,
+			want: 3.2,
+		},
 	}
 
 	for _, tt := range tests {
 		got := Abs(tt.x)
-		assert.Equal(t, got, tt.want)
+		assert.Equal(t, got, tt.want, "Abs test")
 	}
 }
 
@@ -76,6 +84,30 @@ func TestRandInt(t *testing.T) {
 			if got := RandInt(); got != tt.want {
 				t.Errorf("RandInt() = %v, want %v", got, tt.want)
 			}
+		})
+	}
+}
+
+func TestAbs1(t *testing.T) {
+	type args struct {
+		x float64
+	}
+	tests := []struct {
+		name string
+		args args
+		want float64
+	}{
+		{
+			name: "test1",
+			args: args{
+				x: -1,
+			},
+			want: 1,
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			assert.Equalf(t, tt.want, Abs(tt.args.x), "Abs(%v)", tt.args.x)
 		})
 	}
 }
